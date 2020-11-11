@@ -19,7 +19,7 @@ function addTodo(event){
     todoDiv.appendChild(newTodo);
     //Check mark button
     const completedButton = document.createElement('button');
-    completedButton.innerText='<i className="fas fa-check"></i>';
+    completedButton.innerHTML='<i className="fas fa-check"></i>';
     completedButton.classList.add(complete-btn);
     todoDiv.appendChild(completedButton);
 }
