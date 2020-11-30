@@ -35,6 +35,12 @@ form button{
     background:  white;
 }
 
+input[type=text]:focus {
+    border: none;
+    border-top: 4px solid var(--clr-dark);
+    transition: all 0.3s ease;
+}
+
 form button{
     color: var(--clr-dark);
     background: white;
@@ -72,16 +78,27 @@ form button:hover {
 .todo li{
     flex:1;
 }
-.trash-btn,.complete-btn{
-    background: #ff392b;
+.trash-btn{
+    background: #fc4423;
     color: black;
     border: none;
     padding: 1rem;
     cursor: pointer;
     font-size: 1rem;
 }
+.complete-btn{
+    background: #33ff9c;
+    color: black;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.trash-btn:hover{
+    background: #b82504;
+}
 .delete-all-trash-btn{
-    background: #ff392b;
+    background: #fc4423;
     color: black;
     border: none;
     padding: 1rem;
@@ -89,10 +106,13 @@ form button:hover {
     font-size: 1rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
+}
+.delete-all-trash-btn:hover{
+    background: #b82504;
 }
 .clear-completed-btn{
+    background: white;
     color: black;
     border: none;
     padding: 1rem;
@@ -103,7 +123,11 @@ form button:hover {
     align-items: center;
 }
 
-.complete-btn{
+.clear-completed-btn:hover{
+    background:#d6d6d6
+}
+
+.complete-btn:hover{
     background: #1D9D74;
 }
 
@@ -155,3 +179,10 @@ select{
     background: white;
     color:var(--clr-light);
 }
+
+
+
+.fa-check-circle:hover {
+    color: var(--clr-dark);
+}
+
