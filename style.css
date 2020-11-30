@@ -1,3 +1,8 @@
+:root {
+    --clr-light: #68e7f2;
+    --clr-dark: #0584fa;
+  }
+
 *{
     margin: 0;
     padding: 0;
@@ -5,15 +10,16 @@
 }
 
 body{
-    background-image:  linear-gradient(120deg, #f6d365, #FB8C12);
+    background-image:  linear-gradient(120deg, var(--clr-light), var(--clr-dark));
     color: white;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
 }
 
 header{
-    font-size:1.5rem;
+    font-size:2rem;
 }
+
 header,form{
     min-height: 20vh;
     align-items: center;
@@ -30,18 +36,18 @@ form button{
 }
 
 form button{
-    color:#FB8C12;
+    color: var(--clr-dark);
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 form button:hover {
     color:white;
-    background: #FB8C12;
+    background: var(--clr-light);
 }
 
 
-.todo-container{
+.todo-container,.delete-all-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,9 +80,31 @@ form button:hover {
     cursor: pointer;
     font-size: 1rem;
 }
+.delete-all-trash-btn{
+    background: #ff392b;
+    color: black;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.clear-completed-btn{
+    color: black;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .complete-btn{
-    background: #4cf584;
+    background: #1D9D74;
 }
 
 .fa-trash,.fa-check{
@@ -107,7 +135,7 @@ select{
     overflow: hidden;
 }
 select{
-    color: #FB8C12;
+    color: var(--clr-dark);
     width: 10rem;
     cursor: pointer;
     padding: 1rem;
@@ -116,7 +144,7 @@ select{
 .select::after{
     content: "\25BC";
     position: absolute;
-    background: #FB8C12;
+    background: var(--clr-dark);
     top:0;
     right: 0;
     padding: 1rem;
@@ -125,5 +153,5 @@ select{
 
 .select:hover::after{
     background: white;
-    color:#FB8C12;
+    color:var(--clr-light);
 }

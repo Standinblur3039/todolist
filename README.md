@@ -1,3 +1,3 @@
 # Todolist
 
-- First commit
+- Base Project Completed
